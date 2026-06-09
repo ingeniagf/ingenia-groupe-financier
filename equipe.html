@@ -581,17 +581,15 @@ footer{background:#141414;padding:56px 60px 36px}
 }
 .faq-item.open .faq-body{max-height:400px;padding:0 0 24px 0}
 
-.nav-links a{font-family:var(--sans);font-size:.64rem;font-weight:400;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.85);background:none;border:none;cursor:none;padding:10px 15px;transition:color .25s;position:relative;text-decoration:none;display:inline-block}
-.nav-links a::after{content:'';position:absolute;bottom:4px;left:13px;right:13px;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .3s cubic-bezier(.16,1,.3,1)}
-.nav-links a:hover,.nav-links a.active{color:#fff}
-.nav-links a.active::after,.nav-links a:hover::after{transform:scaleX(1)}
-.nav-cta{text-decoration:none}
+.nav-links a{font-family:var(--sans);font-size:.64rem;font-weight:400;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.85);background:none;border:none;cursor:none;padding:10px 15px;transition:color .25s;position:relative;text-decoration:none;display:inline-block}.nav-links a::after{content:'';position:absolute;bottom:4px;left:13px;right:13px;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .3s cubic-bezier(.16,1,.3,1)}.nav-links a:hover,.nav-links a.active{color:#fff}.nav-links a.active::after,.nav-links a:hover::after{transform:scaleX(1)}.nav-cta{text-decoration:none}
 </style>
+</head>
 <body>
 
 <div class="cur" id="cur"><div class="cur-dot" id="curDot"></div></div>
 <div class="cur-ring" id="curRing"></div>
 
+<!-- NAV -->
 <nav>
   <a href="#" class="nav-brand" onclick="G('accueil');return false">
     <span class="nav-brand-name">Ingenia</span>
@@ -609,8 +607,234 @@ footer{background:#141414;padding:56px 60px 36px}
   <a href="contact.html" class="nav-cta">Prendre RDV</a>
 </nav>
 
-<div style="padding-top:80px;min-height:calc(100vh - 80px)">
-<div class="pg-banner mountain"><div class="w"><div class="pg-banner-inner"><div><span class="chip on-dark">Notre équipe</span><h1>Quatre experts.<br/><em>Un seul objectif.</em></h1></div><p>Votre avenir financier, construit avec soin, méthode et transparence. Chaque membre est spécialisé — ensemble nous couvrons l'ensemble de votre réalité financière.</p></div></div></div>
+<!-- ═══════════════════════════════
+     ACCUEIL
+═══════════════════════════════ -->
+<div id="pg-accueil" style="display:none!important;height:0;overflow:hidden">
+
+  <div class="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1920&q=90&auto=format&fit=crop&sat=-100" alt="Montagne"/>
+    </div>
+    <div class="hero-ov"></div>
+    <div class="hero-body">
+      <div class="hero-chip">Experts financiers des ingénieurs</div>
+      <h1 class="hero-h1">
+        La rigueur<br/>
+        <strong>au service de<br/><em>votre avenir.</em></strong>
+      </h1>
+      <p class="hero-sub">Des stratégies financières aussi rigoureuses que votre discipline. Conçues pour les professionnels analytiques qui veulent comprendre chaque décision.</p>
+      <div class="hero-btns">
+        <a href="contact.html" class="btn-dark" >Première rencontre →</a>
+        <a href="services.html" class="btn-outline" >Nos services →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Philosophie -->
+  <div class="philo">
+    <div class="w">
+      <div class="philo-top rv">
+        <span class="chip">Notre philosophie</span>
+        <h2 class="sh philo-h">La rigueur comme <em>fondation.</em></h2>
+        <p class="philo-sub">Notre cabinet a été construit autour d'une conviction simple : les ingénieurs méritent des conseils financiers à la hauteur de leur rigueur intellectuelle. Chaque décision est fondée sur des données réelles — chiffrée, documentée et comprise avant d'être prise.</p>
+      </div>
+      <div class="philo-pillars rv">
+        <div class="pillar"><div class="pillar-n">i.</div><div class="pillar-title">Précision</div><p class="pillar-desc">Chaque recommandation est documentée, chiffrée et justifiée. Zéro décision sans fondement analytique solide.</p></div>
+        <div class="pillar"><div class="pillar-n">ii.</div><div class="pillar-title">Transparence</div><p class="pillar-desc">Vous comprenez chaque stratégie avant de la valider. Nous travaillons exclusivement dans votre intérêt.</p></div>
+        <div class="pillar"><div class="pillar-n">iii.</div><div class="pillar-title">Durabilité</div><p class="pillar-desc">Des plans construits pour traverser les cycles économiques, avec une vision à long terme et un plan personnalisé.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Profils + Nos services -->
+  <div class="profils">
+    <div class="w">
+      <div class="profils-grid">
+        <div class="rl">
+          <span class="chip">Votre profil</span>
+          <h2 class="sh profils-left" style="font-size:clamp(2rem,3.5vw,3.6rem);color:var(--navy);margin:18px 0 22px">Fait pour <em>vous.</em></h2>
+          <p class="profils-desc">Les ingénieurs ont une trajectoire financière distincte. Revenu élevé, progression rapide, régimes spécifiques — votre réalité mérite une approche sur mesure.</p>
+          <ul class="profils-list">
+            <li class="profil-item"><span class="profil-name">Étudiants en génie</span><span class="profil-tag">Profil 01</span></li>
+            <li class="profil-item"><span class="profil-name">CPI — Candidat à la profession</span><span class="profil-tag">Profil 02</span></li>
+            <li class="profil-item"><span class="profil-name">Ingénieurs établis</span><span class="profil-tag">Profil 03</span></li>
+          </ul>
+        </div>
+        <div class="rv">
+          <div class="profils-right">
+            <div class="profils-right-lbl">Nos services</div>
+            <div class="svc-nav-list">
+              <button class="svc-nav-item" href="services.html"><span class="svc-nav-name">Planification financière</span><span class="svc-nav-arrow">→</span></button>
+              <button class="svc-nav-item" href="services.html"><span class="svc-nav-name">Gestion de portefeuille</span><span class="svc-nav-arrow">→</span></button>
+              <button class="svc-nav-item" href="services.html"><span class="svc-nav-name">Assurance &amp; gestion des risques</span><span class="svc-nav-arrow">→</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact intégré -->
+  <div class="home-contact">
+    <div class="w">
+      <div class="home-ct-grid">
+        <div class="rl">
+          <span class="chip">Nous joindre</span>
+          <h2 class="home-ct-h">Commençons par une <em>conversation.</em></h2>
+          <p class="home-ct-desc">Première rencontre sans engagement. Nous analysons votre situation et vous présentons ce qu'une planification rigoureuse peut concrètement changer.</p>
+          <div class="ct-rows">
+            <div class="ct-row"><span class="ct-key">Adresse</span><span class="ct-val">825 Bd Lebourgneuf, Bureau 500<br/>Québec, QC G2J 0B9</span></div>
+            <div class="ct-row"><span class="ct-key">Téléphone</span><span class="ct-val">418-627-4447 poste 273</span></div>
+            <div class="ct-row"><span class="ct-key">Courriel</span><span class="ct-val">equipecloutier-duchesneau@sfl.ca</span></div>
+          </div>
+        </div>
+        <div class="rv">
+          <div class="ct-form">
+            <div class="cf-title">Première rencontre</div>
+            <div class="fr2"><div class="fr"><label class="fl">Prénom</label><input type="text" class="fi" placeholder="Votre prénom"/></div><div class="fr"><label class="fl">Nom</label><input type="text" class="fi" placeholder="Votre nom"/></div></div>
+            <div class="fr"><label class="fl">Courriel</label><input type="email" class="fi" placeholder="courriel@exemple.com"/></div>
+            <div class="fr"><label class="fl">Téléphone</label><input type="tel" class="fi" placeholder="(XXX) XXX-XXXX"/></div>
+            <div class="fr"><label class="fl">Votre profil</label><select class="fsel"><option value="" disabled selected>Sélectionner...</option><option>Étudiant en génie</option><option>CPI — Candidat à la profession</option><option>Ingénieur établi</option><option>Professionnel analytique</option><option>Autre</option></select></div>
+            <div class="fr"><label class="fl">Message (optionnel)</label><textarea class="fta" placeholder="Décrivez brièvement votre situation..."></textarea></div>
+            <button class="fsub">Soumettre ma demande</button>
+            <div class="fnote">Aucun engagement · Réponse sous 24h</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="ft-grid">
+      <div><a href="#" class="ft-logo" onclick="G('accueil');return false"><span>Ingenia</span><span class="ft-logo-sep"></span><span class="ft-logo-sub">Groupe Financier</span></a><p class="ft-tagline">La finance conçue avec rigueur et transparence, au service de votre avenir.</p><div class="ft-legal">Sous la supervision de SFL Placements, Cabinet de services financiers. Les fonds communs de placement sont offerts par des représentants en épargne collective rattachés à SFL Placements.</div></div>
+      <div><div class="ft-col-h">Navigation</div><ul class="ft-links"><li><a href="index.html" >Accueil</a></li><li><a href="services.html" >Services</a></li><li><a href="equipe.html" >Équipe</a></li><li><a href="approche.html" >Approche</a></li></ul></div>
+      <div><div class="ft-col-h">Services</div><ul class="ft-links"><li><a href="services.html" >Planification financière</a></li><li><a href="services.html" >Investissements</a></li><li><a href="services.html" >Assurance &amp; risques</a></li></ul></div>
+      <div><div class="ft-col-h">Contact</div><div class="ft-info"><span>825 Bd Lebourgneuf, Bur 500<br/>Québec, QC G2J 0B9</span><span>418-627-4447 p. 273</span><span>equipecloutier-duchesneau@sfl.ca</span></div></div>
+    </div>
+    <div class="ft-btm"><span class="ft-copy">© 2025 Ingenia Groupe Financier</span><span class="ft-rl">Confidentialité · Conditions</span></div>
+  </footer>
+</div>
+
+<!-- ═══════════════════════════════
+     SERVICES
+═══════════════════════════════ -->
+<div id="pg-services" style="display:none!important;height:0;overflow:hidden"><style>#pg-services footer{margin-top:0}#pg-services .srv-blk:last-of-type{border-bottom:none;padding-bottom:80px}</style>
+  <div class="pg-banner city"><div class="w"><div class="pg-banner-inner"><div><span class="chip on-dark">Nos services</span><h1>Trois piliers.<br/><em>Une vision.</em></h1></div><p>Une offre complète et cohérente, couvrant l'ensemble de votre réalité financière avec la même exigence de fond — à chaque étape de votre vie.</p></div></div></div>
+
+  <!-- SERVICE 01 : Planification financière -->
+  <div class="srv-blk">
+    <div class="w">
+      <div class="srv-in">
+        <div class="srv-sticky">
+          <div class="srv-n">Service 01</div>
+          <h2 class="srv-h2">Planification<br/><em>financière</em></h2>
+          <p class="srv-intro">Votre planificateur vous accompagne dans tous les aspects de votre vie financière pour maximiser votre patrimoine et minimiser votre fardeau fiscal.</p>
+          <a href="contact.html" class="srv-lnk" >Prendre RDV</a>
+        </div>
+        <div class="acc-list">
+  <div class="acc-item"><button class="acc-btn" onclick="toggleAcc(this)"><span class="acc-name">Finances personnelles</span><span class="acc-arrow">+</span></button><div class="acc-body">Analyse complète de votre actif et passif. Votre valeur nette est le point de départ de tout plan financier rigoureux.</div></div>
+  <div class="acc-item"><button class="acc-btn" onclick="toggleAcc(this)"><span class="acc-name">Optimisation fiscale</span><span class="acc-arrow">+</span></button><div class="acc-body">Personne ne devrait payer plus d'impôt qu'il ne le faut. Votre planificateur y voit de façon proactive et documentée.</div></div>
+  <div class="acc-item"><button class="acc-btn" onclick="toggleAcc(this)"><span class="acc-name">Planification retraite</span><span class="acc-arrow">+</span></button><div class="acc-body">D'où proviendront vos revenus à la retraite ? À quel âge serez-vous prêt ? Chaque scénario est modélisé avec précision.</div></div>
+  <div class="acc-item"><button class="acc-btn" onclick="toggleAcc(this)"><span class="acc-name">Planification successorale</span><span class="acc-arrow">+</span></button><div class="acc-body">Votre patrimoine sera dévolu aux personnes souhaitées dans les conditions les plus avantageuses possible.</div></div>
+  <div class="acc-item"><button class="acc-btn" onclick="toggleAcc(this)"><span class="acc-name">Aspects juridiques</span><span class="acc-arrow">+</span></button><div class="acc-body">État civil, régime matrimonial, protection des personnes et mandats — l'environnement juridique complet de votre plan.</div></div>
+  <div class="acc-item"><button class="acc-btn" onclick="toggleAcc(this)"><span class="acc-name">Gestion des risques</span><span class="acc-arrow">+</span></button><div class="acc-body">Les risques qui menacent votre sécurité financière sont mesurés et des stratégies adaptées vous sont proposées.</div></div>
+</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICE 02 : Investissements & comptes -->
+  <div class="srv-blk" style="background:#fff">
+    <div class="w">
+      <div class="srv-in">
+        <div class="srv-sticky">
+          <div class="srv-n">Service 02</div>
+          <h2 class="srv-h2">Investissements &<br/><em>placements</em></h2>
+          <p class="srv-intro">La structure optimale de répartition de vos actifs, selon votre profil, votre horizon et vos objectifs réels.</p>
+          <a href="contact.html" class="srv-lnk" >Prendre RDV</a>
+        </div>
+        <div class="acc-list" style="margin-bottom:40px">
+  <div class="acc-item"><button class="acc-btn" onclick="toggleAcc(this)"><span class="acc-name">CELI</span><span class="acc-arrow">+</span></button><div class="acc-body">Placer de l'argent à l'abri de l'impôt. Les revenus générés (intérêts, dividendes, gains en capital) ne sont pas imposables, même au retrait.</div></div>
+  <div class="acc-item"><button class="acc-btn" onclick="toggleAcc(this)"><span class="acc-name">REER</span><span class="acc-arrow">+</span></button><div class="acc-body">Retarder l'imposition sur l'argent placé et sur les revenus générés jusqu'au retrait à la retraite. Puissant levier fiscal en période de revenu élevé.</div></div>
+  <div class="acc-item"><button class="acc-btn" onclick="toggleAcc(this)"><span class="acc-name">CELIAPP</span><span class="acc-arrow">+</span></button><div class="acc-body">Combinant avantages REER et CELI, ce nouveau compte lancé en 2023 aide les Canadiens à acheter leur première propriété avec des avantages fiscaux cumulatifs.</div></div>
+  <div class="acc-item"><button class="acc-btn" onclick="toggleAcc(this)"><span class="acc-name">REEE</span><span class="acc-arrow">+</span></button><div class="acc-body">Épargne pour études postsecondaires avec incitatifs gouvernementaux très intéressants (SCEE, BCEE) et croissance à l'abri de l'impôt.</div></div>
+  <div class="acc-item"><button class="acc-btn" onclick="toggleAcc(this)"><span class="acc-name">Non-enregistré</span><span class="acc-arrow">+</span></button><div class="acc-body">Compte sans limites de cotisation ni de retrait. Offre beaucoup de flexibilité mais sans avantages fiscaux particuliers. Idéal une fois les comptes enregistrés maximisés.</div></div>
+  <div class="acc-item"><button class="acc-btn" onclick="toggleAcc(this)"><span class="acc-name">FERR</span><span class="acc-arrow">+</span></button><div class="acc-body">Permet de transformer l'épargne REER en revenu de retraite structuré. C'est l'étape naturelle après le REER, avec des retraits minimums annuels obligatoires.</div></div>
+</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICE 03 : Portefeuilles modèles -->
+  <div class="srv-blk" style="background:var(--bg2)">
+    <div class="w">
+      <div class="srv-in">
+        <div class="srv-sticky">
+          <div class="srv-n">Service 03</div>
+          <h2 class="srv-h2">Portefeuilles<br/><em>modèles</em></h2>
+          <p class="srv-intro">Cinq profils d'investissement conçus pour maximiser vos rendements selon votre tolérance au risque et votre horizon de placement.</p>
+          <a href="contact.html" class="srv-lnk" >Prendre RDV</a>
+        </div>
+        <div class="pf-section"><div class="pf-head rv">
+  <span class="chip">Portefeuilles modèles</span>
+  <h2 style="font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.8rem);font-weight:400;color:var(--navy);margin:14px 0 12px;line-height:1.1">Cinq profils d'investissement</h2>
+  <p style="font-size:.92rem;line-height:1.8;color:var(--mid);max-width:560px">Nos portefeuilles sont conçus pour maximiser vos rendements tout en minimisant les risques, en fonction de votre profil et de votre tolérance au risque.</p>
+</div><div class="pf-row"><div class="pf-card"><div class="pf-donut"><svg viewBox="0 0 90 90"><circle class="d-bg" cx="45" cy="45" r="34"/><circle class="d-bd" cx="45" cy="45" r="34" stroke-dasharray="171 43"/><circle class="d-eq" cx="45" cy="45" r="34" stroke-dasharray="43 171" stroke-dashoffset="-171"/></svg><div class="pf-lbl">20/80</div></div><div class="pf-name">P 20/80</div><div class="pf-sub">Conservateur</div><div class="pf-leg"><div class="pf-leg-r"><div class="pf-dot" style="background:#1c1c1c"></div>20% Actions</div><div class="pf-leg-r"><div class="pf-dot" style="background:#8fa8d0"></div>80% Oblig.</div></div></div><div class="pf-card"><div class="pf-donut"><svg viewBox="0 0 90 90"><circle class="d-bg" cx="45" cy="45" r="34"/><circle class="d-bd" cx="45" cy="45" r="34" stroke-dasharray="128 86"/><circle class="d-eq" cx="45" cy="45" r="34" stroke-dasharray="86 128" stroke-dashoffset="-128"/></svg><div class="pf-lbl">40/60</div></div><div class="pf-name">P 40/60</div><div class="pf-sub">Modéré conserv.</div><div class="pf-leg"><div class="pf-leg-r"><div class="pf-dot" style="background:#1c1c1c"></div>40% Actions</div><div class="pf-leg-r"><div class="pf-dot" style="background:#8fa8d0"></div>60% Oblig.</div></div></div><div class="pf-card"><div class="pf-donut"><svg viewBox="0 0 90 90"><circle class="d-bg" cx="45" cy="45" r="34"/><circle class="d-bd" cx="45" cy="45" r="34" stroke-dasharray="86 128"/><circle class="d-eq" cx="45" cy="45" r="34" stroke-dasharray="128 86" stroke-dashoffset="-86"/></svg><div class="pf-lbl">60/40</div></div><div class="pf-name">P 60/40</div><div class="pf-sub">Modéré croiss.</div><div class="pf-leg"><div class="pf-leg-r"><div class="pf-dot" style="background:#1c1c1c"></div>60% Actions</div><div class="pf-leg-r"><div class="pf-dot" style="background:#8fa8d0"></div>40% Oblig.</div></div></div><div class="pf-card"><div class="pf-donut"><svg viewBox="0 0 90 90"><circle class="d-bg" cx="45" cy="45" r="34"/><circle class="d-bd" cx="45" cy="45" r="34" stroke-dasharray="43 171"/><circle class="d-eq" cx="45" cy="45" r="34" stroke-dasharray="171 43" stroke-dashoffset="-43"/></svg><div class="pf-lbl">80/20</div></div><div class="pf-name">P 80/20</div><div class="pf-sub">Croissance</div><div class="pf-leg"><div class="pf-leg-r"><div class="pf-dot" style="background:#1c1c1c"></div>80% Actions</div><div class="pf-leg-r"><div class="pf-dot" style="background:#8fa8d0"></div>20% Oblig.</div></div></div><div class="pf-card"><div class="pf-donut"><svg viewBox="0 0 90 90"><circle class="d-bg" cx="45" cy="45" r="34"/><circle class="d-eq" cx="45" cy="45" r="34" stroke-dasharray="214 0"/></svg><div class="pf-lbl">100</div></div><div class="pf-name">P 100/0</div><div class="pf-sub">Croissance max.</div><div class="pf-leg"><div class="pf-leg-r"><div class="pf-dot" style="background:#1c1c1c"></div>100% Actions</div><div class="pf-leg-r"><div class="pf-dot" style="background:var(--bg3)"></div>0% Oblig.</div></div></div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICE 04 : Assurance & gestion des risques -->
+  <div class="srv-blk" style="background:#fff">
+    <div class="w">
+      <div class="srv-in">
+        <div class="srv-sticky">
+          <div class="srv-n">Service 04</div>
+          <h2 class="srv-h2">Assurance &<br/><em>gestion des risques</em></h2>
+          <p class="srv-intro">Partager le risque auprès d'un assureur pour sécuriser votre avenir en cas de décès, maladie ou invalidité.</p>
+          <a href="contact.html" class="srv-lnk" >Prendre RDV</a>
+        </div>
+        <div>
+          <div class="assu-main-grid">
+  <div class="assu-main-card">
+    
+    <div class="assu-main-title">Assurance vie</div>
+    <p class="assu-main-desc">Produit extrêmement flexible offrant une protection en cas de décès, avec des options d'épargne et d'investissement. Protège ceux qui comptent sur vous tout en préparant votre avenir. Temporaire ou permanente selon votre situation et vos objectifs.</p>
+  </div>
+  <div class="assu-main-card">
+    
+    <div class="assu-main-title">Maladies graves</div>
+    <p class="assu-main-desc">Capital forfaitaire versé au diagnostic d'une maladie grave (cancer, infarctus, AVC…). Permet de compenser la perte de revenus, de payer des soins supplémentaires et de maintenir votre niveau de vie pendant la période de rétablissement.</p>
+  </div>
+  <div class="assu-main-card">
+    
+    <div class="assu-main-title">Assurance invalidité</div>
+    <p class="assu-main-desc">Protection essentielle en cas d'incapacité de travailler, temporaire ou permanente. Elle remplace les revenus perdus suite à un accident ou une maladie — votre bien le plus précieux est votre capacité à gagner un revenu.</p>
+  </div>
+</div>
+          
+  <div class="acc-item"><button class="acc-btn" onclick="toggleAcc(this)"><span class="acc-name">Achat de propriété</span><span class="acc-arrow">+</span></button><div class="acc-body">Couvrir sa portion d'emprunt au décès et rembourser les paiements hypothécaires en cas d'invalidité. Protection essentielle lors d'un premier achat immobilier.</div></div>
+  <div class="acc-item"><button class="acc-btn" onclick="toggleAcc(this)"><span class="acc-name">Arrivée des enfants</span><span class="acc-arrow">+</span></button><div class="acc-body">Avec des enfants à charge, les besoins changent considérablement. Une combinaison vie, invalidité et maladies graves devient fortement recommandée.</div></div>
+  <div class="acc-item"><button class="acc-btn" onclick="toggleAcc(this)"><span class="acc-name">Projet d'entreprise</span><span class="acc-arrow">+</span></button><div class="acc-body">Un plan d'assurance temporaire est recommandé pour geler son état de santé, garantir son assurabilité future et planifier les besoins grandissants avec l'entreprise.</div></div>
+  <div class="acc-item"><button class="acc-btn" onclick="toggleAcc(this)"><span class="acc-name">Comptes enregistrés maximisés</span><span class="acc-arrow">+</span></button><div class="acc-body">Une fois les comptes enregistrés maximisés, un concept d'assurance vie participative peut être intégré au portefeuille comme classe d'actifs complémentaire.</div></div>
+  <div class="acc-item"><button class="acc-btn" onclick="toggleAcc(this)"><span class="acc-name">Planification successorale</span><span class="acc-arrow">+</span></button><div class="acc-body">L'assurance joue un rôle clé dans le transfert de patrimoine et la minimisation de l'impôt au moment du décès. Outil incontournable d'une planification successorale complète.</div></div>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer><div class="ft-grid"><div><a href="#" class="ft-logo" onclick="G('accueil');return false"><span>Ingenia</span><span class="ft-logo-sep"></span><span class="ft-logo-sub">Groupe Financier</span></a><p class="ft-tagline">La finance conçue avec rigueur.</p><div class="ft-legal">Sous la supervision de SFL Placements, Cabinet de services financiers.</div></div><div><div class="ft-col-h">Navigation</div><ul class="ft-links"><li><a href="index.html" >Accueil</a></li><li><a href="equipe.html" >Équipe</a></li><li><a href="approche.html" >Approche</a></li></ul></div><div><div class="ft-col-h">Services</div><ul class="ft-links"><li><a href="services.html" >Planification financière</a></li><li><a href="services.html" >Investissements</a></li><li><a href="services.html" >Assurance &amp; risques</a></li></ul></div><div><div class="ft-col-h">Contact</div><div class="ft-info"><span>825 Bd Lebourgneuf, Bur 500<br/>Québec, QC G2J 0B9</span><span>418-627-4447 p. 273</span><span>equipecloutier-duchesneau@sfl.ca</span></div></div></div><div class="ft-btm"><span class="ft-copy">© 2025 Ingenia Groupe Financier</span><span class="ft-rl">Confidentialité · Conditions</span></div></footer>
+</div>
+
+
+<!-- ═══════════════════════════════
+     ÉQUIPE
+═══════════════════════════════ -->
+<div id="pg-equipe" style="display:block!important;padding-top:80px">
+  <div class="pg-banner mountain"><div class="w"><div class="pg-banner-inner"><div><span class="chip on-dark">Notre équipe</span><h1>Quatre experts.<br/><em>Un seul objectif.</em></h1></div><p>Votre avenir financier, construit avec soin, méthode et transparence. Chaque membre est spécialisé — ensemble nous couvrons l'ensemble de votre réalité financière.</p></div></div></div>
   <div class="w" style="padding-bottom:72px">
     <div class="eq-intro rv"><div><span class="chip">L'équipe</span><h2 class="sh eq-intro-h">Des conseillers dédiés.<br/><em>Votre réussite.</em></h2></div><p class="eq-note">Des professionnels engagés qui planifient votre avenir avec rigueur et transparence.</p></div>
     <div class="eq-grid">
@@ -626,185 +850,88 @@ footer{background:#141414;padding:56px 60px 36px}
 <!-- ═══════════════════════════════
      APPROCHE
 ═══════════════════════════════ -->
-</div>
-
-<!-- ══ BIO MODALS ══ -->
-<div class="bio-modal" id="modal-xd" onclick="closeBioModal(event,this)">
-  <div class="bio-modal-box">
-    <button class="bio-modal-close" onclick="document.getElementById('modal-xd').classList.remove('open')">Fermer ✕</button>
-    <div class="bio-modal-inner">
-      <div>
-        <img class="bio-modal-photo" src="https://images.squarespace-cdn.com/content/v1/67d10fb6ebc2ff4b69662442/87a896ed-dfed-4130-8326-215617e3210b/Photo+professionnelle+-+iA+Groupe+Financier.jpg" alt="Xavier Duchesneau" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-        <div class="bio-modal-ph" style="display:none"><span style="font-family:var(--serif);font-size:3rem;color:var(--navy);opacity:.3">XD</span></div>
+<div id="pg-approche" style="display:none!important;height:0;overflow:hidden">
+  <div class="pg-banner city"><div class="w"><div class="pg-banner-inner"><div><span class="chip on-dark">Notre approche</span><h1>Guide de rencontre.<br/><em>Trois étapes.</em></h1></div><p>Un processus structuré, transparent et reproductible. Vous savez exactement où vous en êtes et pourquoi chaque décision a été prise.</p></div></div></div>
+  <div class="w"><div class="ap-grid">
+    <div class="ap-left rl"><span class="chip">Notre méthode</span><h2 class="sh ap-left" style="font-size:clamp(2rem,3.2vw,3.2rem);color:var(--navy);margin:18px 0 20px">Un système en trois étapes.</h2><p style="font-size:.88rem;line-height:1.85;color:var(--mid);margin-bottom:28px">Structuré comme une démarche d'ingénierie : diagnostic, conception, déploiement. Chaque étape a une intention précise.</p><a href="contact.html" class="btn-dark" >Prendre rendez-vous →</a></div>
+    <div class="ap-steps rv"><div class="ap-step"><div class="ap-step-n">01</div><div><div class="ap-step-dur">1er entretien · 45 min</div><div class="ap-step-name">Prise de contact</div><p class="ap-step-desc">Rencontre pour faire connaissance et aborder votre réalité financière. Vos objectifs, votre parcours, vos questions — sans frais ni engagement.</p><a href="contact.html" class="ap-step-cta" >Prendre rendez-vous</a></div></div><div class="ap-step"><div class="ap-step-n">02</div><div><div class="ap-step-dur">Analyse des besoins · 60 min</div><div class="ap-step-name">Introspection financière</div><p class="ap-step-desc">Nous recueillons toutes les données nécessaires : actifs, passifs, revenus, objectifs, tolérance au risque. Tout documenté avec précision.</p></div></div><div class="ap-step"><div class="ap-step-n">03</div><div><div class="ap-step-dur">Compte-rendu · 90 min</div><div class="ap-step-name">Présentation des recommandations</div><p class="ap-step-desc">Présentation du diagnostic complet. Chaque chiffre expliqué, chaque stratégie justifiée. Vous comprenez tout avant de décider.</p></div></div></div>
+  </div></div>
+  
+  <!-- Section ING fusionnée dans Approche -->
+  <div class="ing-fusion">
+    <div class="w">
+      <div class="ing-fusion-top rv">
+        <span class="chip">Section ingénieurs</span>
+        <h2 class="ing-fusion-h">Encourager les <em>bâtisseurs de demain.</em></h2>
+        <p class="ing-fusion-desc">Notre mission est d'être impliqués auprès de la relève du génie. C'est vous qui conceptualisez, innovez et fondez notre monde de demain. Nous avons construit notre pratique entière autour de votre réalité.</p>
       </div>
-      <div class="bio-modal-content">
-        <div class="bio-modal-name">Xavier Duchesneau, Pl.Fin.</div>
-        <div class="bio-modal-roles">
-          <span class="bio-modal-role">Représentant autonome</span>
-          <span class="bio-modal-role">Planificateur financier</span>
-          <span class="bio-modal-role">Conseiller en sécurité financière</span>
-          <span class="bio-modal-role">Conseiller agréé en avantages sociaux</span>
-          <span class="bio-modal-role">Représentant en épargne collective *</span>
-        </div>
-        <p class="bio-modal-legal">* Les fonds communs de placement sont offerts par l'entremise de représentants en épargne collective rattachés à SFL Placements, Cabinet de services financiers.</p>
-        <p class="bio-modal-para">Combinant sport universitaire, études et travail, ma vocation se résume à planifier l'avenir financier de mes clients et faire partie intégrante de leurs objectifs.</p>
-        <p class="bio-modal-para">De nature curieuse et cartésienne, je suis en mesure de connecter auprès d'une clientèle d'ingénieur(e)s et d'établir une structure à la hauteur des attentes de ma clientèle.</p>
-        <p class="bio-modal-para">Mon rôle est d'être la personne ressource lors de questions ou inquiétudes financières et d'user de créativité et de stratégies personnalisées dans le but d'optimiser le patrimoine et la situation de mes clients tout en assurant une gestion des risques.</p>
-        <div class="bio-modal-logos">
-          <a href="https://www.linkedin.com/in/xavier-duchesneau-pl-fin-c-a-a-s-b3953b242/" target="_blank" class="bio-modal-linkedin">LinkedIn →</a>
-        </div>
+      <!-- Profils -->
+      <div class="ing-fusion-profiles rv">
+        <div class="ing-fp"><span class="ing-fp-n">01</span><span class="ing-fp-name">Étudiants en génie</span></div>
+        <div class="ing-fp"><span class="ing-fp-n">02</span><span class="ing-fp-name">CPI — Candidat à la profession d'ingénieur</span></div>
+        <div class="ing-fp"><span class="ing-fp-n">03</span><span class="ing-fp-name">Ingénieurs établis</span></div>
       </div>
-    </div>
-  </div>
-</div>
-
-<div class="bio-modal" id="modal-tc" onclick="closeBioModal(event,this)">
-  <div class="bio-modal-box">
-    <button class="bio-modal-close" onclick="document.getElementById('modal-tc').classList.remove('open')">Fermer ✕</button>
-    <div class="bio-modal-inner">
-      <div>
-        <img class="bio-modal-photo" src="https://images.squarespace-cdn.com/content/v1/67d10fb6ebc2ff4b69662442/f66cd2f1-2d0c-406b-b57b-e0baddc638bf/Photo+Tommy.jpg" alt="Tommy Cloutier" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-        <div class="bio-modal-ph" style="display:none"><span style="font-family:var(--serif);font-size:3rem;color:var(--navy);opacity:.3">TC</span></div>
-      </div>
-      <div class="bio-modal-content">
-        <div class="bio-modal-name">Tommy Cloutier, B.A.A, Pl.Fin</div>
-        <div class="bio-modal-roles">
-          <span class="bio-modal-role">Représentant autonome</span>
-          <span class="bio-modal-role">Planificateur financier</span>
-          <span class="bio-modal-role">Conseiller en sécurité financière</span>
-          <span class="bio-modal-role">Représentant en épargne collective *</span>
+      <!-- Accès exclusifs banques -->
+      <div class="banks-section rv">
+        <div class="banks-head">
+          <span class="chip">Accès exclusifs</span>
+          <h3 class="banks-h">Plusieurs lignes de produits <em>exclusives aux ingénieurs.</em></h3>
+          <p class="banks-desc">Notre mandat est de vous donner accès à plusieurs lignes de produits exclusifs aux ingénieurs et futurs ingénieurs. Nous aurons la chance d'en discuter ensemble.</p>
         </div>
-        <p class="bio-modal-legal">* Les fonds communs de placement sont offerts par l'entremise de représentants en épargne collective rattachés à SFL Placements, Cabinet de services financiers.</p>
-        <p class="bio-modal-para">Fort de mon expérience d'entrepreneurariat, d'immobilier, de sport et de finance, je me consacre à planifier l'avenir financier de mes clients et à les aider à atteindre leurs objectifs.</p>
-        <p class="bio-modal-para">Passionné par les calculs minutieux, je cherche constamment de nouvelles stratégies financières pour maximiser leur situation et optimiser tous les aspects possibles de contrôler, tant dans la gestion de patrimoine qu'en gestion des risques.</p>
-        <p class="bio-modal-para">En tant que personne ressource, je réponds aux questions et préoccupations financières avec des stratégies créatives et adaptées à votre situation. L'objectif est d'apprendre à se connaître, se suivre dans le temps et grandir ensemble, mais surtout de rendre le processus instructif, agréable et personnalisé.</p>
-        <div class="bio-modal-logos">
-          <a href="https://www.linkedin.com/in/tommy-cloutier/" target="_blank" class="bio-modal-linkedin">LinkedIn →</a>
+        <div class="banks-grid">
+          <div class="bank-card">
+            <div class="bank-logo-wrap"><img src="data:image/png;base64,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"  alt="RBC" class="bank-logo-img"/></div>
+            <p class="bank-desc">Programme Avantages RBC pour ingénieurs — taux préférentiels et solutions bancaires adaptées aux professionnels.</p>
+          </div>
+          <div class="bank-card">
+            <div class="bank-logo-wrap"><img src="data:image/png;base64,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" alt="La Personnelle" class="bank-logo-img"/></div>
+            <p class="bank-desc">Assurance collective offerte aux membres de l'OIQ — habitation, auto et responsabilité civile à des tarifs négociés.</p>
+          </div>
+          <div class="bank-card">
+            <div class="bank-logo-wrap"><img src="data:image/png;base64,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" alt="Banque Nationale" class="bank-logo-img"/></div>
+            <p class="bank-desc">Programme de financement exclusif aux membres ingénieurs avec des conditions avantageuses.</p>
+          </div>
+          <div class="bank-card">
+            <div class="bank-logo-wrap"><img src="data:image/png;base64,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"   alt="TD" class="bank-logo-img"/></div>
+            <p class="bank-desc">Solutions de crédit adaptées aux ingénieurs en début de carrière et aux professionnels établis.</p>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:36px">
+          <a href="contact.html" class="btn-gold" >Réserver mon entretien →</a>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="bio-modal" id="modal-mb" onclick="closeBioModal(event,this)">
-  <div class="bio-modal-box">
-    <button class="bio-modal-close" onclick="document.getElementById('modal-mb').classList.remove('open')">Fermer ✕</button>
-    <div class="bio-modal-inner">
-      <div>
-        <img class="bio-modal-photo" src="https://images.squarespace-cdn.com/content/v1/67d10fb6ebc2ff4b69662442/d1fde9a5-823c-4f7c-b3f3-c5dd358773da/Photo+-+Marc.jpg" alt="Marc-Antoine Bédard" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-        <div class="bio-modal-ph" style="display:none"><span style="font-family:var(--serif);font-size:3rem;color:var(--navy);opacity:.3">MB</span></div>
-      </div>
-      <div class="bio-modal-content">
-        <div class="bio-modal-name">Marc-Antoine Bédard</div>
-        <div class="bio-modal-roles">
-          <span class="bio-modal-role">Représentant autonome</span>
-          <span class="bio-modal-role">Conseiller en sécurité financière</span>
-          <span class="bio-modal-role">Représentant en épargne collective *</span>
-        </div>
-        <p class="bio-modal-legal">* Les fonds communs de placement sont offerts par l'entremise de représentants en épargne collective rattachés à SFL Placements, Cabinet de services financiers.</p>
-        <p class="bio-modal-para">Porté par ma passion pour les finances, l'entrepreneuriat et le sport, j'accompagne mes clients dans la planification stratégique de leur avenir financier en misant sur la structure, la précision et l'efficacité.</p>
-        <p class="bio-modal-para">Avec une approche hautement analytique, j'excelle à décortiquer les situations complexes et à comprendre la logique propre aux ingénieur(e)s. Cette rigueur me permet de transformer des données financières et personnelles en stratégies claires, robustes et adaptées à leur réalité.</p>
-        <p class="bio-modal-para">En tant que personne ressource, je réponds aux questions et préoccupations financières en offrant des stratégies personnalisées. Grâce à une analyse rigoureuse et à un accompagnement attentif, je rends le processus instructif et agréable, permettant à mes clients d'avancer avec vision et confiance.</p>
-        <div class="bio-modal-logos">
-          <a href="https://www.linkedin.com/in/marc-antoine-b%C3%A9dard/" target="_blank" class="bio-modal-linkedin">LinkedIn →</a>
-        </div>
-      </div>
-    </div>
-  </div>
+  <footer><div class="ft-grid"><div><a href="#" class="ft-logo" onclick="G('accueil');return false"><span>Ingenia</span><span class="ft-logo-sep"></span><span class="ft-logo-sub">Groupe Financier</span></a><p class="ft-tagline">La finance conçue avec rigueur.</p><div class="ft-legal">Sous la supervision de SFL Placements, Cabinet de services financiers.</div></div><div><div class="ft-col-h">Navigation</div><ul class="ft-links"><li><a href="index.html" >Accueil</a></li><li><a href="services.html" >Services</a></li><li><a href="equipe.html" >Équipe</a></li></ul></div><div><div class="ft-col-h">Services</div><ul class="ft-links"><li><a href="services.html" >Planification financière</a></li><li><a href="services.html" >Investissements</a></li><li><a href="services.html" >Assurance &amp; risques</a></li></ul></div><div><div class="ft-col-h">Contact</div><div class="ft-info"><span>825 Bd Lebourgneuf, Bur 500<br/>Québec, QC G2J 0B9</span><span>418-627-4447 p. 273</span><span>equipecloutier-duchesneau@sfl.ca</span></div></div></div><div class="ft-btm"><span class="ft-copy">© 2025 Ingenia Groupe Financier</span><span class="ft-rl">Confidentialité · Conditions</span></div></footer>
 </div>
-
-<div class="bio-modal" id="modal-sb" onclick="closeBioModal(event,this)">
-  <div class="bio-modal-box">
-    <button class="bio-modal-close" onclick="document.getElementById('modal-sb').classList.remove('open')">Fermer ✕</button>
-    <div class="bio-modal-inner">
-      <div>
-        <div class="bio-modal-ph"><span style="font-family:var(--serif);font-size:3rem;color:var(--navy);opacity:.3">SB</span></div>
-      </div>
-      <div class="bio-modal-content">
-        <div class="bio-modal-name">Sharlène Beaulieu-Ricard</div>
-        <div class="bio-modal-roles">
-          <span class="bio-modal-role">Adjointe administrative</span>
-        </div>
-        <p class="bio-modal-para" style="margin-top:20px">Véritable pivot opérationnel de l'équipe, Sharlène assure que chaque dossier progresse avec fluidité et précision. Son souci du détail et sa rigueur organisationnelle sont au cœur de la qualité de service d'Ingenia.</p>
-        <p class="bio-modal-para">Elle coordonne les communications, les prises de rendez-vous et le suivi administratif des clients, permettant à l'équipe de se concentrer pleinement sur la planification financière.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
 
 <!-- ═══════════════════════════════
-     FAQ
+     CONTACT
 ═══════════════════════════════ -->
-<div class="pg" id="pg-faq" style="display:none" style="background:var(--bg2)">
-  <div class="pg-banner mountain"><div class="w"><div class="pg-banner-inner"><div><span class="chip on-dark">Foire aux questions</span><h1>Vos questions.<br/><em>Nos réponses.</em></h1></div><p>Tout ce que vous devez savoir avant de commencer. Si vous avez d'autres questions, nous sommes là.</p></div></div></div>
-
-  <div class="w" style="padding:80px 60px">
-    <div class="faq-list">
-
-      <div class="faq-item">
-        <button class="faq-btn" onclick="toggleFaq(this)">
-          <span class="faq-q">Comment sommes-nous rémunérés ?</span>
-          <span class="faq-arrow">+</span>
-        </button>
-        <div class="faq-body">Nous sommes rémunérés selon notre charte personnalisée d'honoraires. Cette dernière consiste en un pourcentage et non un taux horaire. L'objectif étant de quantifier, à l'aide du pourcentage, la valeur conseil et d'optimiser les frais de gestion des investissements. Concernant les produits d'assurance, nous recevons une commission par la compagnie choisie. Nous sommes donc l'intermédiaire entre le client et l'univers de courtage des produits d'assurance.</div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-btn" onclick="toggleFaq(this)">
-          <span class="faq-q">Quel est le rôle de SFL au sein de notre pratique ?</span>
-          <span class="faq-arrow">+</span>
-        </button>
-        <div class="faq-body">Le rôle de SFL est d'agir en tant que courtier et intermédiaire entre nous et l'univers de courtage en placements et en assurances. Nous pouvons par la suite offrir et recommander aux clients les options comblant leurs besoins. SFL examine et réglemente nos méthodes de travail afin que le tout soit conforme et se déroule selon les codes de déontologie de notre pratique. SFL a également comme mission d'assurer une sécurité informatique et nous fournit les différents outils de travail nous permettant d'exercer et de concrétiser des plans financiers.</div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-btn" onclick="toggleFaq(this)">
-          <span class="faq-q">Pourquoi les ingénieurs ?</span>
-          <span class="faq-arrow">+</span>
-        </button>
-        <div class="faq-body">Nous sommes des individus très cartésiens et analytiques. Nous remarquons que plusieurs ingénieurs sont programmés pour analyser et se remettre en question afin de trouver la solution idéale dans leur pratique. Notre structure est donc adjacente à la personnalité type des ingénieurs et ces derniers ne sont pas laissés sans réponse. De plus, nous sommes dans la vingtaine. Nous désirons donc bâtir une clientèle auprès de clients qui nous ressemblent afin de vivre nos projets de vie en même temps que nos clients et prendre notre retraite au même moment.</div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-btn" onclick="toggleFaq(this)">
-          <span class="faq-q">Comment visualiser ses placements avec nous ?</span>
-          <span class="faq-arrow">+</span>
-        </button>
-        <div class="faq-body">Notre clientèle peut en tout temps visualiser l'entièreté de ses investissements à l'aide de l'onglet Connexion à droite de l'entête. Une fois les comptes ouverts, un guide et une clé d'activation est fournie aux clients afin de leur permettre de se connecter et suivre le cours de leurs investissements.</div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-btn" onclick="toggleFaq(this)">
-          <span class="faq-q">Quelle est la différence entre vous et mon institution financière ?</span>
-          <span class="faq-arrow">+</span>
-        </button>
-        <div class="faq-body">Notre offre de service est propre au domaine du génie. Par notre structure indépendante, nous avons accès à un ensemble varié de produits de placements et d'assurances nous permettant de bâtir des plans financiers sans devoir absolument passer par les produits maisons. En misant sur la qualité et non la quantité, nous pouvons investir plusieurs heures sur un dossier dans le but d'amener une structure personnalisée et fonder une relation à long terme.</div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-btn" onclick="toggleFaq(this)">
-          <span class="faq-q">Pourquoi ne ferais-je pas de l'auto-gestion ?</span>
-          <span class="faq-arrow">+</span>
-        </button>
-        <div class="faq-body">Avec l'arrivée des plateformes d'auto-gestion, certains peuvent être tentés d'user d'autodidactie concernant leur planification financière. Les enjeux de cette avenue sont la finance comportementale et la gestion des émotions, le manque de temps, le suivi, les connaissances techniques, la diversification, les erreurs fiscales, etc. Une étude de CIRANO montre que les Canadiens qui s'associent à un professionnel accumulent presque quatre fois plus d'actifs après quinze ans que ceux qui choisissent d'investir seuls.<br/><br/><em style="font-size:.78rem;color:var(--faint)">CIRANO, The Gamma Factor and the Value of Financial Advice, Claude Montmarquette &amp; Nathalie Viennot-Briot</em></div>
-      </div>
-
-    </div>
-
-    <div style="text-align:center;margin-top:64px;padding-top:48px;border-top:1px solid var(--bg3)">
-      <p style="font-family:var(--serif);font-size:1.2rem;color:var(--navy);margin-bottom:20px">Vous avez d'autres questions ?</p>
-      <a href="contact.html" class="btn-dark" >Nous contacter →</a>
-    </div>
-  </div>
-
-  
+<div id="pg-contact" style="display:none!important;height:0;overflow:hidden">
+  <div class="pg-banner mountain"><div class="w"><div class="pg-banner-inner"><div><span class="chip on-dark">Nous joindre</span><h1>Commençons par une<br/><em>conversation.</em></h1></div><p>Première rencontre sans engagement. Nous analysons votre situation et vous présentons ce qu'une planification rigoureuse peut concrètement changer.</p></div></div></div>
+  <div class="w"><div class="ct-page-grid"><div class="rl"><span class="chip">Coordonnées</span><h2 class="ct-page-h">Parlons de <em>votre avenir.</em></h2><p class="ct-page-desc">Que vous ayez une question précise ou souhaitiez explorer vos options, notre équipe vous répond rapidement.</p><div class="ct-rows"><div class="ct-row"><span class="ct-key">Adresse</span><span class="ct-val">825 Bd Lebourgneuf, Bureau 500<br/>Québec, QC G2J 0B9</span></div><div class="ct-row"><span class="ct-key">Téléphone</span><span class="ct-val">418-627-4447 poste 273</span></div><div class="ct-row"><span class="ct-key">Courriel</span><span class="ct-val">equipecloutier-duchesneau@sfl.ca</span></div><div class="ct-row"><span class="ct-key">Réseau</span><span class="ct-val">SFL Placements · Cabinet indépendant</span></div></div></div><div class="rv"><div class="ct-form"><div class="cf-title">Première rencontre</div><div class="fr2"><div class="fr"><label class="fl">Prénom</label><input type="text" class="fi" placeholder="Votre prénom"/></div><div class="fr"><label class="fl">Nom</label><input type="text" class="fi" placeholder="Votre nom"/></div></div><div class="fr"><label class="fl">Courriel</label><input type="email" class="fi" placeholder="courriel@exemple.com"/></div><div class="fr"><label class="fl">Téléphone</label><input type="tel" class="fi" placeholder="(XXX) XXX-XXXX"/></div><div class="fr"><label class="fl">Votre profil</label><select class="fsel"><option value="" disabled selected>Sélectionner...</option><option>Étudiant en génie</option><option>CPI — Candidat à la profession</option><option>Ingénieur établi</option><option>Professionnel analytique</option><option>Autre</option></select></div><div class="fr"><label class="fl">Message (optionnel)</label><textarea class="fta" placeholder="Décrivez brièvement votre situation..."></textarea></div><button class="fsub">Soumettre ma demande</button><div class="fnote">Aucun engagement · Réponse sous 24h</div></div></div></div></div>
+  <footer><div class="ft-grid"><div><a href="#" class="ft-logo" onclick="G('accueil');return false"><span>Ingenia</span><span class="ft-logo-sep"></span><span class="ft-logo-sub">Groupe Financier</span></a><p class="ft-tagline">La finance conçue avec rigueur et transparence, au service de votre avenir.</p><div class="ft-legal">Sous la supervision de SFL Placements, Cabinet de services financiers. Les fonds communs de placement sont offerts par des représentants en épargne collective rattachés à SFL Placements.</div></div><div><div class="ft-col-h">Navigation</div><ul class="ft-links"><li><a href="index.html" >Accueil</a></li><li><a href="services.html" >Services</a></li><li><a href="equipe.html" >Équipe</a></li><li><a href="approche.html" >Approche</a></li></ul></div><div><div class="ft-col-h">Services</div><ul class="ft-links"><li><a href="services.html" >Planification financière</a></li><li><a href="services.html" >Investissements</a></li><li><a href="services.html" >Assurance &amp; risques</a></li></ul></div><div><div class="ft-col-h">Contact</div><div class="ft-info"><span>825 Bd Lebourgneuf, Bur 500<br/>Québec, QC G2J 0B9</span><span>418-627-4447 p. 273</span><span>equipecloutier-duchesneau@sfl.ca</span></div></div></div><div class="ft-btm"><span class="ft-copy">© 2025 Ingenia Groupe Financier</span><span class="ft-rl">Confidentialité · Conditions d'utilisation</span></div></footer>
 </div>
 
-
-
 <script>
-// Navigation inter-pages
+function G(id){var map={'accueil':'index.html','services':'services.html','equipe':'equipe.html','approche':'approche.html','contact':'contact.html','faq':'faq.html'};if(map[id])window.location.href=map[id];}
+
+// Cursor
+const cur=document.getElementById('cur'),curR=document.getElementById('curRing'),curDot=document.getElementById('curDot');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{
+  mx=e.clientX;my=e.clientY;
+  cur.style.left=mx+'px';cur.style.top=my+'px';
+  const el=document.elementFromPoint(mx,my);
+  const dark=el&&el.closest('.pg-banner,.ing-mission,.hero');
+  curDot.style.background=dark?'#f0e8d8':'var(--gold)';
+  curR.style.borderColor=dark?'rgba(240,232,216,.38)':'rgba(184,134,78,.38)';
+});
+(function loop(){rx+=(mx-rx)*.1;ry+=(my-ry)*.1;curR.style.left=rx+'px';curR.style.top=ry+'px';requestAnimationFrame(loop)})();
+
+// Navigation
 
 
 // Reveal scroll
