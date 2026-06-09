@@ -581,8 +581,7 @@ footer{background:#141414;padding:56px 60px 36px}
 }
 .faq-item.open .faq-body{max-height:400px;padding:0 0 24px 0}
 
-.nav-links a{font-family:var(--sans);font-size:.64rem;font-weight:400;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.85);background:none;border:none;cursor:none;padding:10px 15px;transition:color .25s;position:relative;text-decoration:none;display:inline-block}.nav-links a::after{content:'';position:absolute;bottom:4px;left:13px;right:13px;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .3s cubic-bezier(.16,1,.3,1)}.nav-links a:hover,.nav-links a.active{color:#fff}.nav-links a.active::after,.nav-links a:hover::after{transform:scaleX(1)}.nav-cta{text-decoration:none}
-.page-wrap{padding-top:80px;min-height:calc(100vh - 80px)}
+.nav-links a{font-family:var(--sans);font-size:.64rem;font-weight:400;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.85);background:none;border:none;cursor:none;padding:10px 15px;transition:color .25s;position:relative;text-decoration:none;display:inline-block}.nav-links a::after{content:'';position:absolute;bottom:4px;left:13px;right:13px;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .3s cubic-bezier(.16,1,.3,1)}.nav-links a:hover,.nav-links a.active{color:#fff}.nav-links a.active::after,.nav-links a:hover::after{transform:scaleX(1)}.nav-cta{text-decoration:none}.page-wrap{padding-top:80px;min-height:calc(100vh - 80px)}
 </style>
 </head>
 <body>
@@ -661,22 +660,22 @@ footer{background:#141414;padding:56px 60px 36px}
   <footer><div class="ft-grid"><div><a href="#" class="ft-logo" onclick="G('accueil');return false"><span>Ingenia</span><span class="ft-logo-sep"></span><span class="ft-logo-sub">Groupe Financier</span></a><p class="ft-tagline">La finance conçue avec rigueur.</p><div class="ft-legal">Sous la supervision de SFL Placements, Cabinet de services financiers.</div></div><div><div class="ft-col-h">Navigation</div><ul class="ft-links"><li><a href="index.html" >Accueil</a></li><li><a href="services.html" >Services</a></li><li><a href="equipe.html" >Équipe</a></li></ul></div><div><div class="ft-col-h">Services</div><ul class="ft-links"><li><a href="services.html" >Planification financière</a></li><li><a href="services.html" >Investissements</a></li><li><a href="services.html" >Assurance &amp; risques</a></li></ul></div><div><div class="ft-col-h">Contact</div><div class="ft-info"><span>825 Bd Lebourgneuf, Bur 500<br/>Québec, QC G2J 0B9</span><span>418-627-4447 p. 273</span><span>equipecloutier-duchesneau@sfl.ca</span></div></div></div><div class="ft-btm"><span class="ft-copy">© 2025 Ingenia Groupe Financier</span><span class="ft-rl">Confidentialité · Conditions</span></div></footer>
 
 </div>
+<footer>
+    <div class="ft-grid">
+      <div><a href="index.html" class="ft-logo"><span>Ingenia</span><span class="ft-logo-sep"></span><span class="ft-logo-sub">Groupe Financier</span></a><p class="ft-tagline">La finance conçue avec rigueur et transparence.</p><div class="ft-legal">Sous la supervision de SFL Placements, Cabinet de services financiers.</div></div>
+      <div><div class="ft-col-h">Navigation</div><ul class="ft-links"><li><a href="index.html">Accueil</a></li><li><a href="services.html">Services</a></li><li><a href="equipe.html">Équipe</a></li><li><a href="approche.html">Approche</a></li><li><a href="contact.html">Contact</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+      <div><div class="ft-col-h">Services</div><ul class="ft-links"><li><a href="services.html">Planification financière</a></li><li><a href="services.html">Investissements</a></li><li><a href="services.html">Assurance &amp; risques</a></li></ul></div>
+      <div><div class="ft-col-h">Contact</div><div class="ft-info"><span>825 Bd Lebourgneuf, Bur 500<br/>Québec, QC G2J 0B9</span><span>418-627-4447 p. 273</span><span>equipecloutier-duchesneau@sfl.ca</span></div></div>
+    </div>
+    <div class="ft-btm"><span class="ft-copy">© 2025 Ingenia Groupe Financier</span><span class="ft-rl">Confidentialité · Conditions</span></div>
+  </footer>
 
 <script>
 const cur=document.getElementById('cur'),curR=document.getElementById('curRing'),curDot=document.getElementById('curDot');
 let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove',e=>{
-  mx=e.clientX;my=e.clientY;
-  cur.style.left=mx+'px';cur.style.top=my+'px';
-  const el=document.elementFromPoint(mx,my);
-  const dark=el&&el.closest('.pg-banner,.ing-mission,.hero');
-  curDot.style.background=dark?'#f0e8d8':'var(--gold)';
-  curR.style.borderColor=dark?'rgba(240,232,216,.38)':'rgba(184,134,78,.38)';
-});
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';const el=document.elementFromPoint(mx,my);const dark=el&&el.closest('.pg-banner,.ing-mission,.hero');curDot.style.background=dark?'#f0e8d8':'var(--gold)';curR.style.borderColor=dark?'rgba(240,232,216,.38)':'rgba(184,134,78,.38)';});
 (function loop(){rx+=(mx-rx)*.1;ry+=(my-ry)*.1;curR.style.left=rx+'px';curR.style.top=ry+'px';requestAnimationFrame(loop)})();
-document.querySelectorAll('.rv,.rl').forEach(el=>{
-  new IntersectionObserver(([e])=>{if(e.isIntersecting)el.classList.add('on')},{threshold:.08,rootMargin:'0px 0px -28px 0px'}).observe(el);
-});
+document.querySelectorAll('.rv,.rl').forEach(el=>{new IntersectionObserver(([e])=>{if(e.isIntersecting)el.classList.add('on')},{threshold:.08,rootMargin:'0px 0px -28px 0px'}).observe(el);});
 function toggleAcc(btn){const item=btn.closest('.acc-item');const wasOpen=item.classList.contains('open');btn.closest('.acc-list').querySelectorAll('.acc-item').forEach(i=>i.classList.remove('open'));if(!wasOpen)item.classList.add('open');}
 function toggleFaq(btn){const item=btn.closest('.faq-item');const wasOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!wasOpen)item.classList.add('open');}
 function openBio(id){document.getElementById(id).classList.add('open');document.body.style.overflow='hidden';}
