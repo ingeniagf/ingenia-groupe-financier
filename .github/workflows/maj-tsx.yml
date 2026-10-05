@@ -1,0 +1,26 @@
+# Met à jour automatiquement les données du graphique du TSX (page Services, section Placements).
+name: Mise à jour des données du TSX
+on:
+  schedule:
+    - cron: "37 21 * * 1-5"   # du lundi au vendredi, après la fermeture des marchés (17 h 37, heure de l'Est en été)
+  workflow_dispatch: {}        # permet aussi un lancement manuel depuis l'onglet Actions
+permissions:
+  contents: write
+jobs:
+  tsx:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Télécharger et valider les données
+        run: python3 scripts/maj_tsx.py
+      - name: Publier si les données ont changé
+        run: |
+          if git diff --quiet -- assets/data/tsx.json; then echo "Aucun changement."; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add assets/data/tsx.json
+          git commit -m "Données TSX : mise à jour automatique"
+          git push

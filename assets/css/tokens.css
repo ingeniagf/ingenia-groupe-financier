@@ -1,0 +1,73 @@
+/* ==========================================================================
+   Ingenia Groupe Financier — jetons de design
+   Palette 60/30/10 : vert foncé (institution) · vert croissance (action) · turquoise (technique)
+   Toutes les couleurs de texte respectent WCAG AAA (≥ 7:1) sur leur fond prévu.
+   ========================================================================== */
+:root {
+  /* Couleurs de marque */
+  --forest: #002E1C;          /* principal — stabilité, institution */
+  --forest-2: #0A3D28;        /* surfaces sur fond vert foncé */
+  --forest-3: #124A32;
+  --growth: #78C042;          /* secondaire — action, progression */
+  --growth-hover: #8CCB5A;
+  --teal: #6BBFE1;            /* accent — technique, ingénierie (tiré du dégradé officiel) */
+  --teal-soft: #E6F4FA;
+
+  /* Neutres */
+  --white: #FFFFFF;
+  --mist: #F3F6F4;            /* gris très pâle (zones du logo, sections calmes) */
+  --mist-2: #E9EFEB;
+  --line: #DDE5E0;
+  --line-strong: #C3D0C8;
+
+  /* Texte */
+  --ink: #0E1F17;             /* 17:1 sur blanc */
+  --ink-2: #3D5047;           /* 8,6:1 sur blanc */
+  --ink-3: #4A5C53;           /* 7,1:1 sur blanc */
+  --ink-green: #1F5F3A;       /* 7,6:1 — liens et accents texte */
+  --ink-teal: #085A75;        /* 7,7:1 — libellés techniques */
+  --on-forest: #FFFFFF;
+  --on-forest-2: #C9D8CF;     /* 10:1 sur vert foncé */
+
+  /* Typographie */
+  --font: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --fs-xs: 0.8125rem;   /* 13 */
+  --fs-sm: 0.9375rem;   /* 15 */
+  --fs-base: 1.0625rem; /* 17 */
+  --fs-md: 1.25rem;     /* 20 */
+  --fs-lg: 1.375rem;    /* 22 */
+  --fs-xl: 1.5rem;      /* 24 */
+  --fs-2xl: clamp(1.5rem, 1.25rem + 0.9vw, 2rem);
+  --fs-3xl: clamp(1.75rem, 1.4rem + 1.2vw, 2.4rem);
+  --fs-hero: clamp(2rem, 1.45rem + 2vw, 3.1rem);
+  --lh-tight: 1.04;
+  --lh-snug: 1.25;
+  --lh-body: 1.65;
+
+  /* Espacements (échelle 4) */
+  --s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px; --s-5: 24px;
+  --s-6: 32px; --s-7: 48px; --s-8: 64px; --s-9: 96px; --s-10: 128px;
+  --section: clamp(72px, 6vw + 40px, 140px);
+
+  /* Gabarit */
+  --container: 1200px;
+  --container-narrow: 760px;
+  --gutter: clamp(20px, 4vw, 48px);
+  --header-h: 76px;
+
+  /* Rayons : hiérarchie volontaire (champ < carte < panneau) */
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 24px;
+  --r-pill: 999px;
+
+  /* Ombres teintées de vert (jamais gris neutre) */
+  --sh-1: 0 1px 2px rgba(0, 46, 28, .06);
+  --sh-2: 0 1px 2px rgba(0, 46, 28, .05), 0 12px 32px rgba(0, 46, 28, .08);
+  --sh-3: 0 2px 6px rgba(0, 46, 28, .06), 0 30px 70px rgba(0, 46, 28, .14);
+
+  /* Mouvement */
+  --ease: cubic-bezier(.2, .7, .2, 1);
+  --t-fast: 160ms;
+  --t-med: 280ms;
+}
