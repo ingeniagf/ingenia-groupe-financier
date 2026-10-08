@@ -82,9 +82,34 @@
 
   /* Formulaire de prise de rendez-vous : courriel prérempli (aucun serveur requis) */
   var form = $('#rdv-form');
+  /* Cellulaire obligatoire : 10 chiffres (format nord-américain), mis en forme « 418 555-1234 » */
+  var tel = form && $('#telephone', form), telAide = form && $('#tel-aide', form);
+  var telAideTexte = telAide ? telAide.textContent : '';
+  function chiffresTel(v) { var d = (v || '').replace(/\D/g, ''); if (d.length === 11 && d.charAt(0) === '1') d = d.slice(1); return d; }
+  function validerTel(montrer) {
+    var d = chiffresTel(tel.value), msg = '';
+    if (!d.length) msg = 'Indiquez votre numéro de cellulaire pour que nous puissions vous joindre.';
+    else if (d.length !== 10) msg = 'Le numéro doit compter 10 chiffres, par exemple 418 555-1234.';
+    tel.setCustomValidity(msg);
+    if (montrer || !msg) {
+      tel.classList.toggle('is-invalid', !!msg);
+      tel.setAttribute('aria-invalid', msg ? 'true' : 'false');
+      if (telAide) { telAide.textContent = msg || telAideTexte; telAide.classList.toggle('is-error', !!msg); }
+    }
+    return !msg;
+  }
+  if (tel) {
+    tel.addEventListener('input', function () { validerTel(false); });
+    tel.addEventListener('blur', function () {
+      var d = chiffresTel(tel.value);
+      if (d.length === 10) tel.value = d.slice(0, 3) + ' ' + d.slice(3, 6) + '-' + d.slice(6);
+      if (tel.value) validerTel(true);
+    });
+  }
   if (form) {
     form.addEventListener('submit', function (e) {
       var status = $('.form-status', form);
+      if (tel) validerTel(true);
       if (!form.checkValidity()) { e.preventDefault(); form.reportValidity(); return; }
       if (form.getAttribute('action')) return; // un service de formulaire est branché : envoi normal
       e.preventDefault();
@@ -93,7 +118,7 @@
         'Prénom : ' + d.get('prenom'),
         'Nom : ' + d.get('nom'),
         'Courriel : ' + d.get('courriel'),
-        'Téléphone : ' + (d.get('telephone') || '—'),
+        'Cellulaire : ' + d.get('telephone'),
         'Profil : ' + profil,
         'Moment préféré : ' + (d.get('moment') || '—'),
         '',
