@@ -7,7 +7,7 @@
   var canvas = fig.querySelector('canvas'), ctx = canvas.getContext && canvas.getContext('2d'); if (!ctx) return;
   var tip = fig.querySelector('.tsx__tip');
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var C = { forest: '#002E1C', growth: '#78C042', teal: '#6BBFE1', tealInk: '#085A75', ink3: '#4A5C53', line: '#DDE5E0' };
+  var C = { forest: '#22372B', growth: '#5BC500', teal: '#77C5D5', tealInk: '#085A75', ink3: '#4A5C53', line: '#DDE5E0' };
   function rgba(hex, a) { var n = parseInt(hex.slice(1), 16); return 'rgba(' + (n >> 16 & 255) + ',' + (n >> 8 & 255) + ',' + (n & 255) + ',' + a + ')'; }
   var nf = new Intl.NumberFormat('fr-CA', { maximumFractionDigits: 0 });
   var MOIS = ['janv.', 'févr.', 'mars', 'avr.', 'mai', 'juin', 'juil.', 'août', 'sept.', 'oct.', 'nov.', 'déc.'];

@@ -9,7 +9,7 @@
   var pct = new Intl.NumberFormat('fr-CA', { style: 'percent', minimumFractionDigits: 2, maximumFractionDigits: 2 });
   var nb = new Intl.NumberFormat('fr-CA', { maximumFractionDigits: 0 });
   function kfmt(v) { var a = Math.abs(v); return a >= 1e6 ? (v / 1e6).toLocaleString('fr-CA', { maximumFractionDigits: 1 }) + ' M$' : a >= 1e3 ? nb.format(v / 1e3) + ' k$' : nb.format(v) + ' $'; }
-  var COL = { forest: '#002E1C', growth: '#78C042', teal: '#6BBFE1', tealInk: '#085A75', grid: '#E3EAE6', ink3: '#4A5C53' };
+  var COL = { forest: '#22372B', growth: '#5BC500', teal: '#77C5D5', tealInk: '#085A75', grid: '#E3EAE6', ink3: '#4A5C53' };
 
   /* ---------- Lecture du formulaire ---------- */
   function read(form) {

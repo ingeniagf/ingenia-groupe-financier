@@ -1,0 +1,46 @@
+/* ==========================================================================
+   Ingenia — couche « normes graphiques » (guide automne 2026), v29
+   Harmonise le site avec les outils clients : bandeau blanc à filet dégradé,
+   sur-titres verts en capitales, panneaux à bordure fine, motif « plus » du guide.
+   ========================================================================== */
+
+/* En-tête : blanc, filet dégradé vert → ciel, section active soulignée */
+.site-header{background:#fff!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+.site-header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:linear-gradient(90deg,#5BC500 0%,#5BC500 40%,#77C5D5 100%)}
+.site-header.is-scrolled{border-bottom-color:transparent!important}
+.nav__link{border-radius:4px!important;font-weight:500}
+.nav__link[aria-current="page"]{color:var(--forest)!important;background:#E3F3D3!important;box-shadow:inset 0 -2px 0 #5BC500;font-weight:600}
+
+/* Sur-titres : vert, capitales espacées, sans trait */
+.kicker{font-size:12px!important;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-green)!important}
+.kicker::before{display:none!important}
+.section--forest .kicker{color:#9BE05C!important}
+
+/* Titres : graisse moyenne, mise en valeur en vert */
+h1,h2{font-weight:600}
+.hero h1{font-weight:600}
+.hero h1 .accent,h1 .accent,h2 .accent{color:#3A7D00!important;box-shadow:none!important}
+
+/* Boutons : coins de 4 px */
+.btn{border-radius:4px!important}
+.btn--primary{background:#5BC500!important;color:#22372B!important}
+.btn--primary:hover{background:#7DD43A!important}
+.chip{border-radius:4px!important}
+
+/* Cartes et panneaux : bordure fine, sans ombre */
+.card,.person,.fact,.frame,.table-wrap,.accordion details,.cta-band{box-shadow:none!important}
+.compare thead th{background:#E3F3D3!important;color:#22372B!important;border-bottom:2px solid #5BC500}
+
+/* Fond clair et motif « plus » du guide dans l'en-tête de page */
+.hero,.page-hero{background:
+  radial-gradient(ellipse 45% 60% at 96% 6%,rgba(119,197,213,.20),transparent 65%),
+  radial-gradient(ellipse 50% 60% at 92% 100%,rgba(91,197,0,.12),transparent 70%),
+  linear-gradient(180deg,#FFFFFF 0%,#F6F8F5 100%)!important}
+.hero::before,.page-hero::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cpath d='M26 18h4v8h8l-4 4h-4v8l-4 4v-12h-8l4-4h4z' fill='%235BC500' fill-opacity='.14'/%3E%3C/svg%3E");background-size:56px 56px;
+  -webkit-mask-image:linear-gradient(105deg,transparent 45%,#000 88%);mask-image:linear-gradient(105deg,transparent 45%,#000 88%)}
+.page-hero{position:relative;isolation:isolate}
+.section--mist{background:#F4F6F3!important}
+
+/* Quadrillage « plan » : remplacé par le motif du guide sur les bandes vert forêt */
+.section--forest.blueprint,.blueprint--dark{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cpath d='M26 18h4v8h8l-4 4h-4v8l-4 4v-12h-8l4-4h4z' fill='%23ffffff' fill-opacity='.05'/%3E%3C/svg%3E")!important;background-size:56px 56px!important}

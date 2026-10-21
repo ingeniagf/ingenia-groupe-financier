@@ -1,7 +1,7 @@
 /* Ingenia — export PDF des outils financiers (jsPDF chargé seulement au premier clic) */
 (function () {
   'use strict';
-  var COL = { forest: '#002E1C', growth: '#78C042', teal: '#6BBFE1', tealInk: '#085A75', ink: '#0E1F17', ink2: '#3D5047', ink3: '#4A5C53', line: '#DDE5E0', mist: '#F3F6F4', onForest: '#C9D8CF' };
+  var COL = { forest: '#22372B', growth: '#5BC500', teal: '#77C5D5', tealInk: '#085A75', ink: '#0E1F17', ink2: '#3D5047', ink3: '#4A5C53', line: '#DDE5E0', mist: '#F3F6F4', onForest: '#C9D8CF' };
   var DISCLAIMER = 'Résultats fournis à titre indicatif seulement. Les calculs d’impôt utilisent les paramètres fiscaux 2026 pour un résident du Québec et ne tiennent compte que du montant personnel de base. Les rendements ne sont pas garantis et les résultats ne constituent pas une recommandation.';
   var LEGAL = 'Ingenia Groupe Financier exerce ses activités sous la supervision de SFL Placements, cabinet de services financiers, et de SFL Gestion de patrimoine.';
   var CONTACT = 'Ingenia Groupe Financier · 825, boul. Lebourgneuf, bureau 500, Québec (Québec) G2J 0B9 · 418 627-4447, poste 273 · info@ingeniagf.ca · ingeniagf.ca';

@@ -156,7 +156,7 @@ window.IngeniaArrow = function (ctx, x, y, size, angle) {
   var g = ctx.createLinearGradient(107, 320, 411, 19.5);
   g.addColorStop(0, '#60A749'); g.addColorStop(1, '#8CCB5A');
   ctx.fillStyle = g; ctx.fill(path);
-  ctx.lineWidth = 10; ctx.strokeStyle = 'rgba(0,46,28,.55)'; ctx.lineJoin = 'round'; ctx.stroke(path);
+  ctx.lineWidth = 10; ctx.strokeStyle = 'rgba(34,55,43,.55)'; ctx.lineJoin = 'round'; ctx.stroke(path);
   ctx.restore();
 };
 
@@ -169,9 +169,9 @@ window.IngeniaArrow = function (ctx, x, y, size, angle) {
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var css = getComputedStyle(document.documentElement);
   var C = {
-    forest: (css.getPropertyValue('--forest') || '#002E1C').trim(),
-    growth: (css.getPropertyValue('--growth') || '#78C042').trim(),
-    teal: (css.getPropertyValue('--teal') || '#6BBFE1').trim()
+    forest: (css.getPropertyValue('--forest') || '#22372B').trim(),
+    growth: (css.getPropertyValue('--growth') || '#5BC500').trim(),
+    teal: (css.getPropertyValue('--teal') || '#77C5D5').trim()
   };
   function rgba(hex, a) { var n = parseInt(hex.replace('#', ''), 16); return 'rgba(' + (n >> 16 & 255) + ',' + (n >> 8 & 255) + ',' + (n & 255) + ',' + a + ')'; }
 

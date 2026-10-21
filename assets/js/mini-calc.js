@@ -25,7 +25,7 @@
     var every = Math.max(1, Math.ceil(n / 8));
     values.forEach(function (v, i) {
       var h = (H - T - B) * v / top, x = L + i * bw + gap / 2, y = T + (H - T - B) - h, last = accentLast && i === n - 1;
-      s += '<rect x="' + x.toFixed(1) + '" y="' + y.toFixed(1) + '" width="' + Math.max(1, bw - gap).toFixed(1) + '" height="' + h.toFixed(1) + '" rx="2" fill="' + (last ? '#78C042' : i % 2 ? '#0A3D28' : '#002E1C') + '" style="--i:' + i + '"/>';
+      s += '<rect x="' + x.toFixed(1) + '" y="' + y.toFixed(1) + '" width="' + Math.max(1, bw - gap).toFixed(1) + '" height="' + h.toFixed(1) + '" rx="2" fill="' + (last ? '#5BC500' : i % 2 ? '#0A3D28' : '#22372B') + '" style="--i:' + i + '"/>';
       if (i % every === 0 || (i === n - 1 && (n - 1) % every > every / 2)) s += '<text x="' + (x + (bw - gap) / 2).toFixed(1) + '" y="' + (H - 8) + '" text-anchor="middle" font-size="11" fill="#4A5C53" font-family="Plus Jakarta Sans, sans-serif">' + labels[i] + '</text>';
     });
     fig.innerHTML = s + '</svg>';
