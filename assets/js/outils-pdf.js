@@ -140,7 +140,7 @@
     doc.setFillColor(COL.forest); doc.roundedRect(M, y, CW, 80, 8, 8, 'F');
     font('b', 13, '#FFFFFF'); doc.text('Allons plus loin, ensemble.', M + 20, y + 26);
     font('r', 9.5, COL.onForest); doc.text(doc.splitTextToSize('Ces résultats sont une estimation. Un premier entretien de 45 minutes, sans frais ni engagement, permet de les appliquer à votre situation réelle.', CW - 40), M + 20, y + 44);
-    font('b', 9.5, COL.growth); doc.textWithLink('Réserver un entretien : ingeniagf.ca/contact.html', M + 20, y + 68, { url: 'https://ingeniagf.ca/contact.html#rdv' });
+    font('b', 9.5, COL.growth); doc.textWithLink('Réserver un entretien : ingeniagf.ca/contact', M + 20, y + 68, { url: 'https://ingeniagf.ca/contact#rdv' });
 
     /* Pied de page sur chaque page */
     var n = doc.getNumberOfPages();
